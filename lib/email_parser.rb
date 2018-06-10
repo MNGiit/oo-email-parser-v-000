@@ -11,7 +11,9 @@ class EmailParser
   
   def parse
     emails_array = []
+    #Split each email from the string
     @emails.split.each do |email|
+      #Remove "," and add it to emails_array
       emails_array.push(email.split(","))
     end
     emails_array.flatten.uniq
