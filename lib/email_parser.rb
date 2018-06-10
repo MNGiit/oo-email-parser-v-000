@@ -16,6 +16,8 @@ class EmailParser
       #Remove "," and add it to emails_array
       emails_array.push(email.split(","))
     end
+    #Flatten emails_array to only get 1D array (some reason it was 2D?)
+    #Uniq removes copies from the array
     emails_array.flatten.uniq
   end
   
