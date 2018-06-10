@@ -16,7 +16,7 @@ class EmailParser
       #Remove "," and add it to emails_array
       emails_array.push(email.split(","))
     end
-    emails_array.uniq
+    emails_array.flatten.uniq
   end
   
 end
